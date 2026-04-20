@@ -5,9 +5,21 @@
 
 ## 構成
 
-- `raw/`: 参照元の一次資料
-- `wiki/`: 概念ページ、ソースページ、マップページ、用語集、スキーマ
-- `AGENTS.md`: このリポジトリの運用ルール
+```
+llm-wiki/
+  raw/          # 一次資料。原則として追記のみ。LLM は勝手に改変しない
+  wiki/         # LLM が保守する wiki
+    concepts/   # 概念ページ
+    sources/    # 一次資料・Web source の記録
+    maps/       # 概念群の関係を整理する map page
+    glossary.md # 専門用語の標準的な日本語訳を管理する対訳表
+    index.md    # maps へのリンク 
+    schema.md   # wiki のページ種別・必須要素・概念関係の schema
+  AGENTS.md     # 運用ルール
+```
+
+- 導線は index -> maps -> concepts, sources の想定
+- glossary で対訳表を管理することで表記揺れを緩和しています
 
 ## 内容
 
